@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		36006A03291837D600C6F490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36006A02291837D600C6F490 /* AppDelegate.swift */; };
 		36006A05291837D600C6F490 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36006A04291837D600C6F490 /* SceneDelegate.swift */; };
-		36006A07291837D600C6F490 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36006A06291837D600C6F490 /* ViewController.swift */; };
 		36006A0C291837D700C6F490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36006A0B291837D700C6F490 /* Assets.xcassets */; };
 		36006A0F291837D700C6F490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36006A0D291837D700C6F490 /* LaunchScreen.storyboard */; };
+		362842FD292576370089AFDB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362842FC292576370089AFDB /* LoginView.swift */; };
+		362842FF292581B50089AFDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362842FE292581B50089AFDB /* LoginViewController.swift */; };
+		3628430229258C5D0089AFDB /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628430129258C5D0089AFDB /* PasswordChangeViewController.swift */; };
+		3628430429258C760089AFDB /* PasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628430329258C760089AFDB /* PasswordChangeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		360069FF291837D600C6F490 /* SuperTrunfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperTrunfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36006A02291837D600C6F490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36006A04291837D600C6F490 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		36006A06291837D600C6F490 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		36006A0B291837D700C6F490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36006A0E291837D700C6F490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36006A10291837D700C6F490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		362842FC292576370089AFDB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		362842FE292581B50089AFDB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3628430129258C5D0089AFDB /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
+		3628430329258C760089AFDB /* PasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,41 @@
 		36006A01291837D600C6F490 /* SuperTrunfo */ = {
 			isa = PBXGroup;
 			children = (
+				362842FA292575BB0089AFDB /* Features */,
 				36006A02291837D600C6F490 /* AppDelegate.swift */,
 				36006A04291837D600C6F490 /* SceneDelegate.swift */,
-				36006A06291837D600C6F490 /* ViewController.swift */,
 				36006A0B291837D700C6F490 /* Assets.xcassets */,
 				36006A0D291837D700C6F490 /* LaunchScreen.storyboard */,
 				36006A10291837D700C6F490 /* Info.plist */,
 			);
 			path = SuperTrunfo;
+			sourceTree = "<group>";
+		};
+		362842FA292575BB0089AFDB /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3628430029258C360089AFDB /* PasswordChange */,
+				362842FB292575D10089AFDB /* Login */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		362842FB292575D10089AFDB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				362842FC292576370089AFDB /* LoginView.swift */,
+				362842FE292581B50089AFDB /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3628430029258C360089AFDB /* PasswordChange */ = {
+			isa = PBXGroup;
+			children = (
+				3628430129258C5D0089AFDB /* PasswordChangeViewController.swift */,
+				3628430329258C760089AFDB /* PasswordChangeView.swift */,
+			);
+			path = PasswordChange;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36006A07291837D600C6F490 /* ViewController.swift in Sources */,
+				362842FF292581B50089AFDB /* LoginViewController.swift in Sources */,
+				362842FD292576370089AFDB /* LoginView.swift in Sources */,
+				3628430229258C5D0089AFDB /* PasswordChangeViewController.swift in Sources */,
 				36006A03291837D600C6F490 /* AppDelegate.swift in Sources */,
 				36006A05291837D600C6F490 /* SceneDelegate.swift in Sources */,
+				3628430429258C760089AFDB /* PasswordChangeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
