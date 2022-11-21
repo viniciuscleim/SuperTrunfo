@@ -15,6 +15,8 @@
 		362842FF292581B50089AFDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362842FE292581B50089AFDB /* LoginViewController.swift */; };
 		3628430229258C5D0089AFDB /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628430129258C5D0089AFDB /* PasswordChangeViewController.swift */; };
 		3628430429258C760089AFDB /* PasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628430329258C760089AFDB /* PasswordChangeView.swift */; };
+		36EBE15E292C1E5F0066F958 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EBE15D292C1E5F0066F958 /* RegisterViewController.swift */; };
+		36EBE160292C1E980066F958 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EBE15F292C1E980066F958 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		362842FE292581B50089AFDB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3628430129258C5D0089AFDB /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
 		3628430329258C760089AFDB /* PasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeView.swift; sourceTree = "<group>"; };
+		36EBE15D292C1E5F0066F958 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		36EBE15F292C1E980066F958 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		362842FA292575BB0089AFDB /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				36EBE15C292C1E230066F958 /* Register */,
 				3628430029258C360089AFDB /* PasswordChange */,
 				362842FB292575D10089AFDB /* Login */,
 			);
@@ -95,6 +100,15 @@
 				3628430329258C760089AFDB /* PasswordChangeView.swift */,
 			);
 			path = PasswordChange;
+			sourceTree = "<group>";
+		};
+		36EBE15C292C1E230066F958 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				36EBE15D292C1E5F0066F958 /* RegisterViewController.swift */,
+				36EBE15F292C1E980066F958 /* RegisterView.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +183,10 @@
 			files = (
 				362842FF292581B50089AFDB /* LoginViewController.swift in Sources */,
 				362842FD292576370089AFDB /* LoginView.swift in Sources */,
+				36EBE15E292C1E5F0066F958 /* RegisterViewController.swift in Sources */,
 				3628430229258C5D0089AFDB /* PasswordChangeViewController.swift in Sources */,
 				36006A03291837D600C6F490 /* AppDelegate.swift in Sources */,
+				36EBE160292C1E980066F958 /* RegisterView.swift in Sources */,
 				36006A05291837D600C6F490 /* SceneDelegate.swift in Sources */,
 				3628430429258C760089AFDB /* PasswordChangeView.swift in Sources */,
 			);

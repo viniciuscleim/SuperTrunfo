@@ -12,8 +12,8 @@ class LoginView: UIView {
     lazy var logoImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(systemName: "person.fill")
-        image.contentMode = .scaleToFill
+        image.image = UIImage(named: "Logo")
+        image.contentMode = .scaleAspectFit
         return image
     }()
     
@@ -62,7 +62,7 @@ class LoginView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Entrar", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .blue
+        button.backgroundColor = .orange
         button.layer.cornerRadius = 12
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
         return button
@@ -104,8 +104,8 @@ class LoginView: UIView {
         NSLayoutConstraint.activate([
             
             logoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            logoImageView.heightAnchor.constraint(equalToConstant: 110),
-            logoImageView.widthAnchor.constraint(equalToConstant: 110),
+            logoImageView.heightAnchor.constraint(equalToConstant: 200),
+            logoImageView.widthAnchor.constraint(equalToConstant: 200),
             logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             emailTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 40),
