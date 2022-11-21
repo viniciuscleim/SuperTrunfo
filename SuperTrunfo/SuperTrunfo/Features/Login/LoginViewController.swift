@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginView?.setDelegate(delegate: self)
         
 
         
@@ -29,4 +30,26 @@ class LoginViewController: UIViewController {
     
 
   
+}
+
+//MARK: - loginViewDelegate
+
+extension LoginViewController: LoginViewDelegate {
+    func actionForgotPasswordButton() {
+        let nextViewController: PasswordChangeViewController = PasswordChangeViewController()
+        navigationController?.pushViewController(nextViewController, animated: true)
+        
+    }
+    
+    func actionSignInButton() {
+       
+    }
+    
+    func actionRegisterButton() {
+        let nextViewController: RegisterViewController = RegisterViewController()
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
+    
+    
 }

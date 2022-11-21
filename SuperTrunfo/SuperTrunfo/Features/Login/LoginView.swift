@@ -7,7 +7,19 @@
 
 import UIKit
 
+protocol LoginViewDelegate: AnyObject {
+    func actionForgotPasswordButton()
+    func actionSignInButton()
+    func actionRegisterButton()
+}
+
 class LoginView: UIView {
+    
+    weak private var delegate: LoginViewDelegate?
+    
+    func setDelegate(delegate: LoginViewDelegate?) {
+        self.delegate = delegate
+    }
     
     lazy var logoImageView: UIImageView = {
         let image = UIImageView()
@@ -54,6 +66,7 @@ class LoginView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Esqueceu a senha?", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(didTapForgotPasswordButton), for: .touchUpInside)
         return button
     }()
     
@@ -65,6 +78,7 @@ class LoginView: UIView {
         button.backgroundColor = .orange
         button.layer.cornerRadius = 12
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
+        button.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
         return button
         
     }()
@@ -74,6 +88,7 @@ class LoginView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Nao tem conta? Cadastra-se", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
         return button
     }()
     
@@ -89,6 +104,17 @@ class LoginView: UIView {
         
     }
     
+    @objc private func didTapForgotPasswordButton() {
+        delegate?.actionForgotPasswordButton()
+    }
+    
+    @objc private func didTapSignInButton() {
+        delegate?.actionSignInButton()
+    }
+    
+    @objc private func didTapRegisterButton() {
+        delegate?.actionRegisterButton()
+    }
 
     private func addElements() {
         addSubview(logoImageView)

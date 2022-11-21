@@ -9,6 +9,14 @@ import UIKit
 
 class PasswordChangeView: UIView {
     
+    lazy var returnButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        button.tintColor = .black
+        return button
+    }()
+    
     lazy var logoImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -69,6 +77,7 @@ class PasswordChangeView: UIView {
     }
     
     private func addElements() {
+        addSubview(returnButton)
         addSubview(logoImageView)
         addSubview(passwordChangeLabel)
         addSubview(emailTextField)
@@ -79,7 +88,11 @@ class PasswordChangeView: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             
-            logoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            returnButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
+            returnButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            returnButton.heightAnchor.constraint(equalToConstant: 40),
+            
+            logoImageView.topAnchor.constraint(equalTo: returnButton.bottomAnchor, constant: 10),
             logoImageView.heightAnchor.constraint(equalToConstant: 200),
             logoImageView.widthAnchor.constraint(equalToConstant: 200),
             logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
