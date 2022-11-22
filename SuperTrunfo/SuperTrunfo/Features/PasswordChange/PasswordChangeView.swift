@@ -7,7 +7,17 @@
 
 import UIKit
 
+protocol PasswordViewDelegate: AnyObject {
+    func actionReturnButton()
+}
+
 class PasswordChangeView: UIView {
+    
+    weak private var delegate: PasswordViewDelegate?
+    
+    func setDelegate(delegate: PasswordViewDelegate?) {
+        self.delegate = delegate
+    }
     
     lazy var returnButton: UIButton = {
         let button = UIButton()
@@ -74,6 +84,10 @@ class PasswordChangeView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
         
+    }
+    
+    @objc private func didTapReturnButton() {
+        delegate?.actionReturnButton()
     }
     
     private func addElements() {

@@ -18,10 +18,23 @@ class PasswordChangeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordChangeView?.setDelegate(delegate: self)
         
-
         }
     
    
   
 }
+
+//MARK: - passwordViewDelegate
+
+extension PasswordChangeViewController: PasswordViewDelegate {
+    func actionReturnButton() {
+        let previousViewController: LoginViewController = LoginViewController()
+        navigationController?.popToViewController(previousViewController, animated: true)
+       
+    }
+    
+    }
+    
+
